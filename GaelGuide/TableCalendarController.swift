@@ -9,7 +9,11 @@
 import UIKit
 
 class TableCalendarController: UITableViewController {
-    let somearray = ["CAB - Warriors Ticket SignUp", "RHA - Giant's Game ", "APASA - Asian Cultural Night", "GaelForce - Tshirt Pickup"]
+    let nameOfEvent = ["CAB - Warriors Ticket SignUp", "RHA - Giant's Game ", "APASA - Asian Cultural Night", "GaelForce - Tshirt Pickup"]
+    let nameOfWho = ["All Students", "All Students", "On Campus Residents Only", "Seniors!"]
+    let nameOfWhen = ["Today", "5/11/16", "March 17, 2016", "TBD"]
+    let nameOfWhere = ["Chapel Lawn", "Galileo Hall", "Moraga Commons", "Garaventa"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +40,16 @@ class TableCalendarController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return somearray.count
+        return nameOfEvent.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("event", forIndexPath: indexPath)
         
-//      cell.textLabel?.text = "Yooo"
         cell.textLabel!.textColor = UIColor.blueColor()
-        cell.textLabel?.text = somearray[indexPath.item]
+        cell.textLabel?.text = nameOfEvent[indexPath.item]
+//        cell.textLabel?.text = nameofWho[indexPath.item]
         // Configure the cell...
 
         return cell
@@ -98,7 +102,11 @@ class TableCalendarController: UITableViewController {
         //referencing event controller by casting destinationViewController as EventInfoController
         let eventController = segue.destinationViewController as? EventInfoController
         //gives: index of whatever cell was selected,
-        eventController?.eventName = somearray[(self.tableView.indexPathForSelectedRow?.row)!]
+        eventController?.What = nameOfEvent[(self.tableView.indexPathForSelectedRow?.row)!]
+        eventController?.Who = nameOfWho[(self.tableView.indexPathForSelectedRow?.row)!]
+        eventController?.When = nameOfWhen[(self.tableView.indexPathForSelectedRow?.row)!]
+        eventController?.Where = nameOfWhere[(self.tableView.indexPathForSelectedRow?.row)!]
+//        eventController?.eventName = somearray[(self.tableView.indexPathForSelectedRow?.row)!]
         
     }
 
