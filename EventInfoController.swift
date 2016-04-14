@@ -11,16 +11,27 @@ import UIKit
 class EventInfoController: UIViewController {
 
     @IBOutlet weak var testLabel: UILabel!
-    var eventName = ""
+    var What = ""
     
+    @IBOutlet weak var testLabel2: UILabel!
+    var Who = ""
+    
+    @IBOutlet weak var testLabel3: UILabel!
+    var When = ""
+    
+    @IBOutlet weak var testLabel4: UILabel!
+    var Where = ""
     
 //    @IBOutlet weak var testLabel2: UILabel!
 //    var eventName2 = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testLabel.text = eventName
-//        testLabel2.text = eventName2
+        testLabel.text = What
+        testLabel2.text = Who
+        testLabel3.text = When
+        testLabel4.text = Where
+
         self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
     }
