@@ -6,14 +6,13 @@
 //  Copyright © 2016 Justine Seastres. All rights reserved.
 //
 
-import UIKit
+import  UIKit
 
 class TableCalendarController: UITableViewController {
     let nameOfEvent = ["CAB - Warriors Ticket SignUp", "RHA - Giant's Game ", "APASA - Asian Cultural Night", "GaelForce - Tshirt Pickup"]
     let nameOfWho = ["All Students", "All Students", "On Campus Residents Only", "Seniors!"]
     let nameOfWhen = ["Today", "5/11/16", "March 17, 2016", "TBD"]
     let nameOfWhere = ["Chapel Lawn", "Galileo Hall", "Moraga Commons", "Garaventa"]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
