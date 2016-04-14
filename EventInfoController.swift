@@ -22,6 +22,12 @@ class EventInfoController: UIViewController {
     @IBOutlet weak var testLabel4: UILabel!
     var Where = ""
     
+    @IBOutlet weak var testLabel5: UILabel!
+    var eventTitle = ""
+    
+//    @IBOutlet weak var testLabel5: UILabel!
+//    var Descriptionn = ""
+    
 //    @IBOutlet weak var testLabel2: UILabel!
 //    var eventName2 = ""
     
@@ -31,6 +37,8 @@ class EventInfoController: UIViewController {
         testLabel2.text = Who
         testLabel3.text = When
         testLabel4.text = Where
+        testLabel5.text = eventTitle
+//        testLabel5.text = Descriptionn
 
         self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
