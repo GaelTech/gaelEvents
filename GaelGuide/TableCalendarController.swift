@@ -106,6 +106,8 @@ class TableCalendarController: UITableViewController {
         eventController?.Who = nameOfWho[(self.tableView.indexPathForSelectedRow?.row)!]
         eventController?.When = nameOfWhen[(self.tableView.indexPathForSelectedRow?.row)!]
         eventController?.Where = nameOfWhere[(self.tableView.indexPathForSelectedRow?.row)!]
+        eventController?.eventTitle = nameOfEvent[(self.tableView.indexPathForSelectedRow?.row)!]
+
 //        eventController?.eventName = somearray[(self.tableView.indexPathForSelectedRow?.row)!]
         
     }
