@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Create a reference to a Firebase location
+        let myRootRef = Firebase(url:"https://gael-events.firebaseio.com")
+
+        
+        myRootRef.observeEventType(.Value, withBlock: {
+            snapshot in
+            print("\(snapshot.key) -> \(snapshot.value)")
+        })
+        
+        
+        myRootRef.setValue("Do you have data? You'll love Firebase.")
         return true
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
